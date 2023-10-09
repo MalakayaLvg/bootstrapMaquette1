@@ -8,78 +8,114 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="d-flex flex-column">
+    <div>
+        <nav class="navbar bg-body-secondary">
+            <div class="container">
+                <span class="navbar-brand mb-0 h1">Symfony demo Application</span>
+                <span class="navbar-brand mb-0 h1"><i class="bi bi-house-fill"></i> Homepage</span>
+            </div>
+        </nav>
 
-<nav class="navbar bg-body-tertiary">
-    <div class="container">
-        <span class="navbar-brand mb-0 h1">Symfony demo Application</span>
-        <span class="navbar-brand mb-0 h1"><i class="bi bi-house-fill"></i> Homepage</span>
+        <div class="container">
+            <div class="row my-4">
+
+                <div class="col-3">
+                    <div class="bg-light rounded">
+                        <h5><i class="bi bi-lock-fill m-3"></i> Secure sign-in</h5>
+
+                        <form class="m-3">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label"><span class="fw-semibold">Username</span></label>
+                                <input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label"><span class="fw-semibold">Password:</span></label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <button type="submit" class="btn btn-secondary mb-3"><i class="bi bi-box-arrow-in-right me-2"></i>Sign in</button>
+                        </form>
+
+                    </div>
+                </div>
+                <div class="col-6">
+                    <h5><i class="bi bi-arrow-left"></i> Try either of the following users</h5>
+
+                    <table class="table table-striped table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <th scope="col">Username</th>
+                            <th scope="col">Password</th>
+                            <th scope="col">Role</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>user1</td>
+                            <td>pass1</td>
+                            <td><span class="badge bg-secondary me-2">ROLE_USER</span>(regular user)</td>
+                        </tr>
+                        <tr>
+                            <td>user1</td>
+                            <td>pass1</td>
+                            <td><span class="badge bg-secondary me-2">ROLE_USER</span>(regular user)</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="border rounded d-flex flex-column">
+
+                        <div class="m-3">
+                            <p><span class="badge text-bg-success me-2">NOTE</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur debitis eius iusto laborum similique tenetur.</p>
+                            <div class="bg-light rounded p-2">
+                                <span class="">Lorem ipsum dolor sit amet.</span>
+                            </div>
+                        </div>
+
+                        <div class="m-3">
+                            <p><span class="badge text-bg-success me-2">TIP</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur debitis eius iusto laborum similique tenetur.</p>
+                            <div class="bg-light rounded width-100% p-2">
+                                <span class="">Lorem ipsum dolor sit amet.</span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="col-3 d-flex flex-column">
+                    <div class="bg-light rounded">
+                        <div class="m-3">
+                            <p>This is a <span class="fw-semibold">demo application</span> built in the Symfony Framwork to illustrate the recommended way of developing Symfony applications.</p>
+                            <p>For mor information, check out the <a href="#" class="link-success link-offset-2 link-underline-opacity-0">Symfony Documentation</a></p>
+                        </div>
+                    </div>
+
+                    <p class="my-4">Click on this button to show the source code of the <span class="fw-semibold">Controller</span> and <span class="fw-semibold">template</span> used to render this page.</p>
+
+                    <button type="button" class="btn btn-secondary py-3"><i class="bi bi-gear"></i>Show source code</button>
+                </div>
+            </div>
+        </div>
     </div>
-</nav>
 
-<div class="container">
-    <div class="row">
-        <div class="col-3">
-            <div class="bg-body-secondary rounded">
-                <h5><i class="bi bi-lock-fill"></i> Secure sign-in</h5>
-
-                <form>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Username</label>
-                        <input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-
+    <div class="bg-body-secondary flex-end ">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                <p class="fw-light pt-3">2015 - The Symfony Project</p>
+                <p class="fw-light">MIT licence</p>
             </div>
-        </div>
-        <div class="col-5">
-            <h5><i class="bi bi-arrow-left"></i> Try either of the following users</h5>
-
-            <table class="table table-striped table-bordered table-hover">
-                <thead>
-                    <tr>
-                        <th scope="col">Username</th>
-                        <th scope="col">Password</th>
-                        <th scope="col">Role</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>user1</td>
-                        <td>pass1</td>
-                        <td><span class="badge bg-secondary">ROLE_USER</span>(regular user)</td>
-                    </tr>
-                    <tr>
-                        <td>user1</td>
-                        <td>pass1</td>
-                        <td><span class="badge bg-secondary">ROLE_USER</span>(regular user)</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <div class="border rounded d-flex flex-column">
-
-                <p><span class="badge text-bg-success">NOTE</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur debitis eius iusto laborum similique tenetur.</p>
-                <div class="bg-light rounded width-100%">
-                    <span class="">Lorem ipsum dolor sit amet.</span>
-                </div>
-                <p><span class="badge text-bg-success">TIP</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur debitis eius iusto laborum similique tenetur.</p>
-                <div class="bg-light rounded width-100%">
-                    <span class="">Lorem ipsum dolor sit amet.</span>
-                </div>
-
+            <div>
+            <span class="h3">
+                <i class="bi bi-twitter mx-2"></i>
+                <i class="bi bi-facebook mx-2"></i>
+                <i class="bi bi-wifi mx-2"></i>
+            </span>
             </div>
-        </div>
-
-        <div class="col-3">
-
         </div>
     </div>
 </div>
+
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
